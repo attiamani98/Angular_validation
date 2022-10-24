@@ -8,4 +8,4 @@ COPY . /app
 RUN npm run build --prod
 # Stage 2
 FROM nginx:1.17.1-alpine
-COPY --from=builder /app/docs /usr/share/nginx/html
+COPY --from=builder /app/ /usr/share/nginx/html
